@@ -1,0 +1,39 @@
+git clone -b main https://github.com/jdavidleon22052008-cyber/test_bcp_2026.git
+
+cd "\nombre del repor que se genera al clonar"
+
+Git Branch  (para ver que rama estamos usando)
+
+git branch -a  (para ver todas las ramas locales y remotas)
+
+git checkout feature/DBMG-XXXXX , develop
+
+git status
+
+git add .
+
+git commit -m "colocar breve descripción"
+
+git push
+
+--------------------------------------------------------------------
+--------------------------------------------------------------------
+
+git push (salía error por intentar subir a un GitHub erroneo)
+
+mensaje erroneo : info: please complete authentication in your browser...
+remote: Permission to jdavidleon22052008-cyber/test_bcp_2026.git denied to kevinhuacahuasigamarra.
+fatal: unable to access 'https://github.com/jdavidleon22052008-cyber/test_bcp_2026.git/': The requested URL returned error: 403
+
+
+git config --global credential.helper manager (si no funciona, usas el otro de abajo)
+
+
+printf "protocol=https\nhost=github.com\n" | git credential-manager erase  (sirve para borrar las credenciales previas de un github)
+
+
+la cosa que al final te aparezca esa ventanita que te permita loguear tucuenta de GitHub.
+--------------------------------------------------------------------
+--------------------------------------------------------------------
+
+git push
